@@ -1,13 +1,16 @@
-// using this file is optional
-// you can also load the code snippets in using your browser's console
-const divs = document.querySelectorAll('div');
- 
-function bubble(e) {
-  e.stopPropagation();
- 
-  console.log(this.firstChild.nodeValue.trim() + ' bubbled');
-}
- 
-for (let i = 0; i < divs.length; i++) {
-  divs[i].addEventListener('click', bubble);
+const input = document.querySelector('input');
+
+input.addEventListener('mouseover', function(e) {
+    alert('Hello there!');
+});
+
+// Prevent numbers in input
+input.addEventListener('keydown', function(e) {
+  if (e.which === 20 ) {
+    e.preventDefault()
+    console.log("Caps lock is on")
+  } else {
+    console.log(e.which)
+    }
+  }
 }
