@@ -7,7 +7,6 @@ input.addEventListener('mouseover', function(e) {
 // Prevent numbers in input
 input.addEventListener('keydown', function(e) {
   if (e.which === 20 ) {
-    alert "Caps lock is on"!
+    return alert("Caps lock is on"!)
   }
 });
-  
